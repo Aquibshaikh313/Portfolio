@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap.css">
+    <style>
+        header {
+            border: 1px solid gray;
+            box-shadow: 2px 2px 2px gray;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title {
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+            font-size: 30px;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar div {
+            margin-right: 30px;
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+
+        .banner {
+            margin-top: 5px;
+            box-shadow: 2px 2px 2px gray;
+            border: 1px solid gray;
+            background-image: url("../my web application/public/Images/bgmen.png");
+            background-repeat: no-repeat;
+            background-color: black;
+            color: white;
+            height: 550px;
+        }
+
+        .side-panel {
+            font-size: 30px;
+            font-family: Arial;
+            text-align: center;
+            width: 600px;
+            margin-top: 50px;
+            margin-left: 750px;
+            height: 300px;
+            padding: 30px;
+        }
+
+        .list {
+            font-size: small;
+            margin-top: 50px;
+            color: tomato;
+        }
+
+        .check-in {
+            font-size: 15px;
+            letter-spacing: 12px;
+            word-spacing: 8px;
+            font-family: 'Courier New';
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+        }
+
+        .name {
+            font-family: 'Gill Sans', 'Gill Sans MT';
+            color: rgb(187, 150, 137);
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div class="title">
+            PORTFOLIO
+        </div>
+        <div class="nav-bar">
+            <div>Home</div>
+            <div>About Me</div>
+            <div>Portfolio</div>
+            <div>Contact</div>
+            <div>Projects</div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="side-panel">
+            <div>
+                <h1 class="name">AQUIB SHAIKH</h1>
+                <p>I'm a fullstack <b>'Web Developer'</b></p>
+                <div class="check">
+                    <p class="check-in">Check my profile</p>
+                    <button class="btn btn-danger">Signin</button>
+                    <button class="btn btn-warning">Register</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <li>aquib.shaikh256@gmail.com</li>
+                <li>9075591998</li>
+                <li>Maharashtra, India</li>
+            </ul>
+        </div>
+
+</body>
+
+</html>
