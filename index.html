@@ -5,414 +5,332 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-Profile</title>
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>My-Portfolio</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <style>
-        body {
-            background-color: #fcfce0;
+        ::placeholder {
+            background-color: white;
+            color: black;
+        }
+
+
+
+        .imges {
+            transition: ease-in-out;
+            transition-duration: 1s;
+            overflow: hidden;
+
+        }
+
+        .imges:hover {
+            transition: all;
+            transition-duration: 3s;
+            transform: scale(1.1);
+        }
+
+        .container-fluid {
+            background-color: black;
+            color: white;
         }
 
         header {
-            border: 1px solid gray;
-            box-shadow: 2px 2px 2px gray;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
+
+            width: 100%;
         }
 
-        .title {
-            color: black;
-            font-weight: bold;
+        .me {
+            font-size: 100px;
             font-family: 'Gill Sans', 'Gill Sans MT';
-            font-size: 30px;
         }
 
-        .nav-bar {
-            display: flex;
+        .me:hover {
+            color: aqua;
+
         }
 
-        .nav-bar div {
-            margin-right: 30px;
-            font-size: 20px;
-            font-family: Arial;
-            font-weight: bold;
-        }
-
-        .banner {
-            margin-top: 5px;
-            box-shadow: 2px 3px 4px gray;
-            border: 1px solid gray;
-            background-image: url("../My\ web\ application/public/Images/bgmen2.png");
-            height: 500px;
-        }
-
-        .list {
-            font-size: small;
-            margin-top: 150px;
-            color: black;
-        }
-
-        button {
-            width: 130px;
-        }
-
-        .text {
-            font-size: 18px;
-            color: white;
-        }
-
-        .side-panel {
-            color: white;
-            font-size: 30px;
-            font-family: Arial;
-            text-align: center;
-            width: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            padding: 30px;
-            margin-left: 650px;
-            margin-top: 60px;
-        }
 
         a {
             text-decoration: none;
-            color: black;
+            color: grey;
+            font-size: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        a:active {
+        a:hover {
             color: red;
-        }
-
-        b {
-            font-family: 'Gill Sans', 'Gill Sans MT';
-        }
-
-
-
-        #EDUCATION {
-            color: black;
-            font-size: large;
-            font-family: 'Gill Sans', 'Gill Sans MT';
-            font-weight: bold;
-            text-decoration: underline;
-
-        }
-
-        .edu {
-            font-size: 20px;
-            display: grid;
-            grid-template-columns: 4fr 4fr 4fr;
-            font-family: Arial, Helvetica, sans-serif;
-            color: black;
-        }
-
-        .link {
-            color: black;
-        }
-
-        .Skills {
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: black;
-
-            justify-content: space-between;
-
-        }
-
-        .Skills2 {
-            color: black;
-            font-family: 'Gill Sans', 'Gill Sans MT';
             text-decoration: underline;
         }
 
-        meter {
-            width: 520px;
-            justify-content: space-between;
+        .A {
 
+            width: 100px;
+            height: 120px;
+            margin-bottom: 60px;
         }
 
-        .contact {
-            font-size: 24px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: black;
-        }
-
-        #Contact {
-            color: black;
+        .proj {
             font-family: 'Gill Sans', 'Gill Sans MT';
+            color: white;
+        }
+
+        .proj:hover {
+            color: red;
             text-decoration: underline;
-        }
-
-        .contact {
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(201, 91, 47);
-            display: flex;
-            justify-content: space-around;
-            margin-left: 130px;
-
-        }
-
-        .input {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            color: slategrey;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .bi-person-lines-fill {
-            color: tomato;
-            font-size: 40px;
-            text-align: center;
-            justify-content: center;
-
-        }
-
-        .bi-envelope-check {
-            color: tomato;
-            font-size: 40px;
-            text-align: center;
-            justify-content: center;
-        }
-
-        .bi-geo-alt-fill {
-            color: tomato;
-            font-size: 40px;
-            text-align: center;
-            justify-content: center;
-        }
-
-
-        p {
-            color: black;
-            font-size: 18px;
-        }
-
-        textarea {
-            background: #fcfce0;
-            color: black;
-            margin-left: 150px;
-        }
-
-        .submit {
-            width: 1020px;
-            margin-left: 150px;
-            background-color: yellow;
-            color: black;
-            border: none;
-
         }
 
         .name {
+            margin-right: 65px;
+        }
+
+        .title {
+            position: fixed;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+            font-size: 25px;
+
+        }
+
+        .navbar-nav {
+            background-color: black;
+            margin-top: 50px;
             font-size: 30px;
+            position: fixed;
+            height: 550px;
+            width: 150px;
+        }
+
+        .info {
+            margin-top: 150px;
+            margin-left: 400px;
+        }
+
+        .new {
+            font-size: 20px;
+            margin-bottom: 1px;
+        }
+
+        #contact {
+            text-decoration: none;
+        }
+
+        .Education,
+        .projects,
+        .skills,
+        .contactme {
+            margin-top: 40px;
+            margin-left: 180px;
             font-family: 'Gill Sans', 'Gill Sans MT';
-            color: blueviolet;
-        }
 
-        .container {
-            display: grid;
-            grid-template-columns: 4fr 4fr 4fr;
-            width: 50px;
-            height: 50px;
-            background-repeat: no-repeat;
-        }
-
-        .aquib {
-            display: flex;
-            grid-gap: 120px;
-        }
-
-        .bottom {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .projects {
-            color: black;
-            font-family: 'Gill Sans', 'Gill Sans MT';
-            font-weight: bold;
-            text-decoration: underline;
         }
     </style>
+    <script>
+        function GetDetails(name) {
+            document.getElementById('display').innerHTML = name.fontcolor('aqua');
+
+        }
+        function OpenImage(name) {
+            switch (name) {
+                case "KFC":
+                    window.open("http://127.0.0.1:5500/Projects/Kfc.html", "KFC Order", "width=1200 height=768",);
+                    break;
+                case "Netflix Login":
+                    window.open("/public/Images/signin.png.png", "Netflix Login", "width=1200 height=768",);
+                    break;
+                case "BMI Calculator":
+                    window.open("/public/Images/Bmi.png.png", "BMI Calculator", "width=1200 height=768",);
+                    break;
+                case "GDS":
+                    window.open("/public/Images/gds.png.png", "GDS", "width=1200 height=768",);
+                    break;
+                case "Amazon":
+                    window.open("/public/Images/amazon.png.png", "Amazon", "width=1200 height=768",);
+                    break;
+                case "Responsive":
+                    window.open("/public/Images/Screenshot (201).png", "Responsive", "width=1200 height=768",);
+                    break;
+                case "Portal":
+                    window.open("/public/Images/portal.png.png", "Portal", "width=1200 height=768",);
+                    break;
+                case "Hotel Registration":
+                    window.open("/public/Images/hotelregistration.png", "Hotel Registration", "width=1200 height=768",);
+                    break;
+                case "Casscading Dropdown":
+                    window.open("/public/Images/casscadingdropdown.png", "Casscading Dropdown", "width=1200 height=768",);
+                    break;
+            }
+        } 
+    </script>
 </head>
 
-<body class="container-fluid">
-    <header id="home">
-        <div class="title">
-            PORTFOLIO
-        </div>
-        <div class="nav-bar">
-            <div><a href="#home"> Home</a></div>
-            <div class="about"><select name="" id="">
-                    <optgroup label="About Me" value="selected">
-                        <option value="selected"><a href="#EDUCATION">About Me</a></option>
-                        <option value="">Education</option>
-                        <option value="">Skills</option>
-                    </optgroup>
-                </select></div>
-            <div><a href="#project"> Projects</a> </div>
-            <div><a href="#">Portfolio</a> </div>
-            <div><a href="#Contact"> Contact</a> </div>
-        </div>
-    </header>
-    <div class="banner">
-        <div class="side-panel">
-            <div>
-                <h4>
-                    Hello I'm <br> <br> <b class="name"> AQUIB SHAIKH</b><br> <br> UI/UX Designer and Front end
-                    Developer
-                </h4>
-                <p class="text">Check My Profile</p>
-                <div>
-                    <button class="btn btn-danger">Sigin</button>
-                    <button class="btn btn-warning">Register</button>
+<body class="container-fluid mt-3 ">
+    <header id="home" class="p-1">
+        <h2 class="title">PORTFOLIO</h2>
+        <div>
+
+            <ul class="navbar-nav border p-4">
+                <li class="new"><img src="/HTML Examples/font.png" style="width:105px; height: 105px;"></li><br>
+                <div class="up">
+                    <h4 class="text-info ms-2">Aquib</h4>
+                    <li>
+                        <p class="text-secondary" style="font-size: 14px;"> Web Developer</p>
+                    </li>
+                    <li class="nav-item"><a href="">Home</a></li>
+                    <li class="nav-item"><a href="#Education">About me</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#project">Project</a></li>
+                    <li class="nav-item"><a href="#contact">Contact me</a></li>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/aquib-shaikh-3857ab226/"><span
+                                class="bi bi-linkedin"></span></a>
+                        <a href="https://instagram.com/aquibshaikh313?igshid=YmMyMTA2M2Y="><span
+                                class="bi bi-instagram"></span></a>
+                        <a href="https://www.youtube.com/channel/UCeXFUy2XeF3_DGM_Jt7-KDA"><span
+                                class="bi bi-youtube"></span></a>
+                    </div>
                 </div>
+
+            </ul>
+        </div>
+        <div class="info">
+            <div>
+                <h1 class="me">
+                    Hi,<br><b> I'm <img class="A" src="/HTML Examples/font.png"><b class="name">QUIB,</b></b> <br>Web
+                    Developer.
+
+                </h1><br>
+                <div class="d-flex">
+                    <button class="btn btn-outline-warning w-25 me-3"><a href="#contact">Contact me </a><span
+                            class="bi bi-telephone"></span></button>
+                    <button class="btn btn-outline-warning w-25">Hire me <span class="bi bi-download"></span></button>
+                </div>
+
             </div>
         </div>
-    </div><br><br>
-    <hr>
-    <div id="EDUCATION">
-        <h2><b><a href="#" class="link">EDUCATION</a></b></h2>
-    </div>
-    <div class="edu">
-        <div class="ssc">
-            <p>SSC</p>
-            <p>2015</p>
-            <p>Carmel Convent School</p>
+    </header>
+
+    <div class="all">
+        <!-- EDUCATION -->
+
+        <div class="Education" id="Education">
+            <h2><b>EDUCATION</b></h2>
+            <ul>
+                <li>
+                    <h4 class="text-info"><b>Secondary School Certificate(SSC)</b></h4>
+                    <p class="text-secondary">-Carmel Covent School, Ahmednagar Maharashtra.</p>
+                </li>
+                <li>
+                    <h4 class="text-info"><b>Higher Secondary Certificate(HSC)</h4>
+                    <p class="text-secondary">-Residential Jr.College, Ahmednagar Maharashtra.</p>
+                </li>
+                <li>
+                    <h4 class="text-info"><b>Bachelor of Engineering(BE)</b></h4>
+                    <p class="text-secondary">-Dr.Vithalrao Vikhe patil College of Engineering,Ahmednagar Maharashtra.
+                    </p>
+                </li>
+            </ul>
         </div>
-        <div class="hsc">
-            <p>HSC</p>
-            <p>2017</p>
-            <p>Residential junior college</p>
-        </div>
-        <div class="degree">
-            <p>BE</p>
-            <p>2021</p>
-            <p>Vithalrao vikhe patil COE</p>
-        </div>
-        <div class="Skills2">
+
+        <!-- Skills -->
+        <div class="skills" id="skills">
             <h2><b>SKILLS</b></h2>
+            <ul style="font-size: 22px;">
+
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>Sass/Less</li>
+                <li>Javascript</li>
+                <li>jQuery</li>
+                <li>React</li>
+            </ul>
         </div>
 
+
+        <!-- Projects -->
+
+        <div class="projects" id="project">
+            <div class="d-flex">
+                <h2><b>PROJECTS</b></h2>:<h2 id="display"></h2>
+            </div>
+            <table width="100%" border="1" frame="void">
+                <tbody>
+                    <tr>
+                        <td><img src="/public/Images/KFCorder.png" class="imges" name="Cards"
+                                ondblclick="OpenImage(this.name)" onmouseover="GetDetails('KFC Orders')" width="380px">
+                            <p><a href="http://127.0.0.1:5500/Projects/Kfc.html" class="proj">KFC Order Now</a></p>
+                        </td>
+                        <td><img src="/public/Images/N.png" class="imges" name="Netflix Login"
+                                ondblclick="OpenImage(this.name)" width="380px">
+                            <p><a href="http://127.0.0.1:5500/HTML%20Examples/Sign-In%20pages/Netflix.html"
+                                    class="proj">Netflix login page</a></p>
+                        </td>
+
+                        <td><img src="/public/Images/Screenshot (201).png" class="imges" name="Responsive"
+                                ondblclick="OpenImage(this.name)" width="380px">
+                            <p><a href="http://127.0.0.1:5500/Projects/ResponsiveDesign.html" class="proj">Responsive
+                                    Design</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="/public/Images/hotel2.png" class="imges" name="Hotel Registration"
+                                ondblclick="OpenImage(this.name)" width="380px">
+                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Hotel.html" class="proj">Hotel
+                                    Regitration Form</a></p>
+                        </td>
+
+                        <td><img src="/public/Images/Amazons.png.png" class="imges" name="Amazon"
+                                ondblclick="OpenImage(this.name)" width="380px">
+                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Amazon.html"
+                                    class="proj">Interactive Carousel and Cart Items</a></p>
+                        </td>
+
+                        <td><img src="/public/Images/bmicalci.png" class="imges" name="BMI Calculator"
+                                ondblclick="OpenImage(this.name)" width="380px" height="220px">
+                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Calculators/BMI.html"
+                                    class="proj">BMI
+                                    Calculator</a></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><img src="/public/Images/india.png.png" class="imges" name="Portal"
+                                ondblclick="OpenImage(this.name)" width="380">
+                            <p><a href="http://127.0.0.1:5500/Projects/portal.html" class="proj">Portal of India</a></p>
+                        </td>
+                        <td><img src="/public/Images/gds.png.png" class="imges" name="GDS"
+                                ondblclick="OpenImage(this.name)" width="380px">
+                            <p><a href="" class="proj">GDS Online Engagement</a></p>
+                        </td>
+
+                        <td><img src="/public/Images/CasscadingDropdown.png" class="imges" name="Casscading Dropdown"
+                                ondblclick="OpenImage(this.name)" width="380">
+                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/CascadingINOX.html"
+                                    class="proj">Casscading Dropdown</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        <div class="contactme" id="contact">
+            <h2 style="color:aqua;">CONTACT ME</h2>
+            <p>If you have any query you can directly contact me, for that you just have to fill the following details
+                below.</p>
+            <div class="d-flex mb-3">
+                <input type="text" class="form-control me-3 w-25" size="8" placeholder="Your Name"><input type="email"
+                    size="8" class="form-control w-25" placeholder="Enter email address">
+            </div>
+            <textarea name="" id="" cols="70" rows="10" placeholder="Enter text here"></textarea><br>
+            <button class="btn btn-outline-warning mb-5"><a
+                    href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Send Message!</a></button>
+        </div>
     </div>
-    <div class="Skills">
-        HTML5:
-        <meter min="0" max="100" value="30" low="40" high="80"></meter><span>
-            jQuery:
-            <meter min="0" max="100" value="30" low="40" high="80"></meter>
-        </span><br><br>
-        CSS3:
-        <meter min="0" max="100" value="60" low="0" high="0"></meter>
-        </span>
-
-        Bootstrap:
-        <meter min="0" max="100" value="60" low="0" high="0"></meter>
-        </span><br><br>
-
-        React:
-        <meter min="0" max="100" value="100" low="60" high="80"></meter>
-        </span>
-
-        Javascript:
-        <meter min="0" max="100" value="100" low="60" high="80"></meter>
-        </span>
-    </div><br>
-    <hr>
-    <div class="projects" id="project">
-        <h2><b>PROJECTS</b></h2>
-        <table width="100%" border="1" cellspacing="15" cellpadding="10" frame="void">
-            <tbody>
-                <tr height="200" bgcolor="white">
-                    <td>
-                        <table width="100%">
-                            <table width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../My web application/public/Images/response.png.png"
-                                                width="400px">
-                                            <p>Responsive Design
-                                            </p>
-                                        </td>
 
 
-                                    </tr>
-                                </tbody>
-                            </table>
-                    </td>
-                    <td>
-                        <table width="100%">
-                            <table width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../My web application/public/Images/signin.png.png" width="400px">
-                                            <p>Netflix login page
-                                            </p>
-                                        </td>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                    </td>
-                    <td>
-                        <table width="100%">
-                            <tbody>
-                                <tr>
-                                    <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../My web application/public/Images/insta.png" width="400px">
-                                        <p>Instagram login page
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                </tr>
-            </tbody>
-        </table>
-    </div><br>
-    <div class="aquib">
-        <img src="../My web application/public/Images/gds.png.png" width="600px" height="400">
-
-        <img src="../My web application/public/Images/amazon.png.png" width="600px" height="400">
-    </div> <br>
-    <div class="bottom">
-        <img src="../My web application/public/Images/responsive.png.png" width="800px" height="500">
-
-    </div>
-    <hr>
-    <div>
-        <h2><b><a href="#" id="Contact">CONTACT DETAILS</a></b></h2>
-    </div><br>
-    <div class="contact">
-        <span class="bi bi-person-lines-fill">
-            <p>9075591998</p>
-        </span>
-        <span class="bi bi-envelope-check">
-            <p> aquib.shaikh256@gmail.com</p>
-        </span>
-        <span class="bi bi-geo-alt-fill">
-            <p>Ahmednagar, Maharashtra</p>
-        </span><br><br>
-
-    </div>
-    <textarea name="" id="" cols="135" rows="10" placeholder="Enter your text"></textarea>
-    <div>
-        <button class="submit">Submit</button>
-    </div>
-<hr>
 
 </body>
 
