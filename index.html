@@ -5,329 +5,211 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-Portfolio</title>
+    <title>Project</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    
     <style>
-        ::placeholder {
-            background-color: white;
-            color: black;
-        }
-
-
-
-        .imges {
-            transition: ease-in-out;
-            transition-duration: 1s;
-            overflow: hidden;
-
-        }
-
-        .imges:hover {
-            transition: all;
-            transition-duration: 3s;
-            transform: scale(1.1);
-        }
-
-        .container-fluid {
-            background-color: black;
-            color: white;
-        }
-
-        header {
-
-            width: 100%;
-        }
-
-        .me {
-            font-size: 100px;
-            font-family: 'Gill Sans', 'Gill Sans MT';
-        }
-
-        .me:hover {
-            color: aqua;
-
-        }
-
-
-        a {
-            text-decoration: none;
-            color: grey;
-            font-size: 15px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        a:hover {
-            color: red;
-            text-decoration: underline;
-        }
-
-        .A {
-
-            width: 100px;
-            height: 120px;
-            margin-bottom: 60px;
-        }
-
-        .proj {
-            font-family: 'Gill Sans', 'Gill Sans MT';
-            color: white;
-        }
-
-        .proj:hover {
-            color: red;
-            text-decoration: underline;
-        }
-
-        .name {
-            margin-right: 65px;
-        }
-
-        .title {
-            position: fixed;
-            font-family: 'Gill Sans', 'Gill Sans MT';
-            font-size: 25px;
-
-        }
-
-        .navbar-nav {
-            background-color: black;
-            margin-top: 50px;
-            font-size: 30px;
-            position: fixed;
-            height: 550px;
-            width: 150px;
-        }
-
-        .info {
-            margin-top: 150px;
-            margin-left: 400px;
-        }
-
         .new {
-            font-size: 20px;
-            margin-bottom: 1px;
+            font-size: small;
         }
 
-        #contact {
-            text-decoration: none;
+        .pic {
+            border-radius: 20px 20px 0px 0px;
+            width: 80px;
+            height: 80px;
+            margin-left: 80px;
         }
 
-        .Education,
-        .projects,
-        .skills,
-        .contactme {
-            margin-top: 40px;
-            margin-left: 180px;
-            font-family: 'Gill Sans', 'Gill Sans MT';
+        .instruct {
+            font-size: small;
+            text-align: center;
+            background: orange;
+            color: white;
+            width: 80px;
+            margin-left: 80px;
+            border-radius: 0px 0px 10px 10px;
+        }
 
+        .new2 {
+            margin-left: 340px;
+        }
+
+        .div1 {
+            background-color: rgb(58, 2, 110);
+            height: 460px;
+            border-radius: 0px 0px 15px 20px;
+
+        }
+
+        .div2 {
+            background-color: white;
+            height: 250px;
+        }
+
+        .div3 {
+            background-color: rgb(58, 2, 110);
+            color: white;
+            height: 240px;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+
+        .card {
+            margin-left: 150px;
+            background: rgb(58, 2, 110);
+            color: white;
+            border: 1px solid orange;
+        }
+
+        .facility {
+            margin-left: 120px;
+            color: white;
+
+        }
+
+
+
+        .enroll {
+            margin-left: 25px;
+        }
+        .facility+button+span .bi{
+            font-size: 1rem;
         }
     </style>
-    <script>
-        function GetDetails(name) {
-            document.getElementById('display').innerHTML = name.fontcolor('aqua');
-
-        }
-        function OpenImage(name) {
-            switch (name) {
-                case "KFC":
-                    window.open("http://127.0.0.1:5500/Projects/Kfc.html", "KFC Order", "width=1200 height=768",);
-                    break;
-                case "Netflix Login":
-                    window.open("/public/Images/signin.png.png", "Netflix Login", "width=1200 height=768",);
-                    break;
-                case "BMI Calculator":
-                    window.open("/public/Images/Bmi.png.png", "BMI Calculator", "width=1200 height=768",);
-                    break;
-                case "GDS":
-                    window.open("/public/Images/gds.png.png", "GDS", "width=1200 height=768",);
-                    break;
-                case "Amazon":
-                    window.open("/public/Images/amazon.png.png", "Amazon", "width=1200 height=768",);
-                    break;
-                case "Responsive":
-                    window.open("/public/Images/Screenshot (201).png", "Responsive", "width=1200 height=768",);
-                    break;
-                case "Portal":
-                    window.open("/public/Images/portal.png.png", "Portal", "width=1200 height=768",);
-                    break;
-                case "Hotel Registration":
-                    window.open("/public/Images/hotelregistration.png", "Hotel Registration", "width=1200 height=768",);
-                    break;
-                case "Casscading Dropdown":
-                    window.open("/public/Images/casscadingdropdown.png", "Casscading Dropdown", "width=1200 height=768",);
-                    break;
-            }
-        } 
-    </script>
 </head>
 
-<body class="container-fluid mt-3 ">
-    <header id="home" class="p-1">
-        <h2 class="title">PORTFOLIO</h2>
-        <div>
+<body class="container-fluid ">
 
-            <ul class="navbar-nav border p-4">
-                <li class="new"><img src="/HTML Examples/font.png" style="width:105px; height: 105px;"></li><br>
-                <div class="up">
-                    <h4 class="text-info ms-2">Aquib</h4>
-                    <li>
-                        <p class="text-secondary" style="font-size: 14px;"> Web Developer</p>
-                    </li>
-                    <li class="nav-item"><a href="">Home</a></li>
-                    <li class="nav-item"><a href="#Education">About me</a></li>
-                    <li class="nav-item"><a href="#skills">Skills</a></li>
-                    <li class="nav-item"><a href="#project">Project</a></li>
-                    <li class="nav-item"><a href="#contact">Contact me</a></li>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/aquib-shaikh-3857ab226/"><span
-                                class="bi bi-linkedin"></span></a>
-                        <a href="https://instagram.com/aquibshaikh313?igshid=YmMyMTA2M2Y="><span
-                                class="bi bi-instagram"></span></a>
-                        <a href="https://www.youtube.com/channel/UCeXFUy2XeF3_DGM_Jt7-KDA"><span
-                                class="bi bi-youtube"></span></a>
+    <div class=" div1 m-1 p-1">
+        <div class="text-center">
+            <h3 class='text-warning'>UI DESIGN CLASSES</h3>
+            <p class="text-white ">Perfect for beginners hands on experience to <br> jump start your career in <span
+                    class="text-warning">User-Interface Design(UI)</span> </p>
+        </div>
+        <div class="d-flex">
+            <div class="card d-flex" style="width: 18rem;">
+                <div class="card-body">
+                    <img class="pic" src="file:///E:/Web%20Application/public/Images/person.png">
+                    <p class="instruct text-white text-center">Instructed By</p>
+                    <h6 class="card-subtitle mb-2 text-white text-center"><b>Brendan Cline</b> </h6>
+                    <p class=" new card-text text-center">Director of Design at Maiden</p>
+                    <hr class="text-warning">
+                    <p class="new">Worked with the brand like</p>
+                    <div class="brand">
+                        <link rel="stylesheet" href="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="facility ">
+                <button class="btn btn-outline-secondary w-25 me-3"><span
+                        class="bi bi-clock width:25px height:25px"><br> 3 Hours Time
+                    </span></button>
+                <button class="btn btn-outline-secondary w-25 me-3"><span class="name bi bi-pc-display-horizontal"><br>
+                        Live
+                        Sessions</span></button>
+                <button class="btn btn-outline-secondary w-25"><span class="name bi bi-calendar"><br> 17th
+                        December</span></button><br>
+                <div class="mt-2 ">
+                    <button class="btn btn-outline-secondary w-25 me-3"><span class="name bi bi-stopwatch-fill"><br>
+                            11am
+                            Onwards</span>
+                    </button>
+                    <button class="btn btn-outline-secondary w-25 me-3"><span class="name bi bi-card-checklist"><br>
+                            Full
+                            Hands
+                            on</span>
+                    </button>
+                    <button class="btn btn-outline-secondary w-25"> <span class="name bi bi-book"><br> Mini
+                            Projects</span>
+                    </button>
+
+                </div>
+                <div class="enroll">
+                    <button class="btn btn-warning text-center w-75 mt-3 "> <b>Enroll Now</b> <span
+                            class="bi bi-chevron-double-right text-white"></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class=" div2 mt-2 m-2">
+        <h2 class="text-center text-primary">WHAT WILL YOU <br><b>LEARN IN THE CLASSES</b></h2>
+        <div class="row">
+            <div class="col-6">
+                <div class=" alert alert-secondary w-100 " role="alert">
+                    <span class="bi bi-check-circle-fill text-primary"> </span>
+                    Understand most important fundamentals of visual design and accessibility
+
+
+                </div>
+
+                <div class="alert alert-secondary w-100" role="alert">
+                    <span class="bi bi-check-circle-fill  text-primary"></span> My super effective techinque of visual
+                    first design when to use & not
+
+                </div>
+                <div class="alert alert-secondary w-100" role="alert">
+                    <span class="bi bi-check-circle-fill  text-primary"></span>
+                    My magic formula for UI design for E-commerce
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="alert alert-secondary w-100" role="alert">
+                    <span class="bi bi-check-circle-fill  text-primary"></span>
+                    My Secret on creating world class UI in record time
+                </div>
+                <div class="alert alert-secondary w-100" role="alert">
+                    <span class="bi bi-check-circle-fill  text-primary"></span>
+                    My textbook approach to Understand how visual drive UX
+                </div>
+                <div class="alert alert-secondary w-100 " role="alert">
+                    <span class="bi bi-check-circle-fill  text-primary"></span>
+                    My non-textbook approach to Understand how visual drive UX
+                </div>
+            </div>
+            <div class=" new2 alert alert-secondary w-50" role="alert">
+                <span class="bi bi-check-circle-fill  text-primary"></span> My non-textbook approach to Understand how
+                visual drive UX
+
+            </div>
+
+        </div>
+        <div class="div3 mt-5">
+            <h1 class="text-center">WHO IS THIS CLASS FOR?</h1>
+            <div class="row ms-5">
+                <div class="col-md-6">
+                    <div class="alert alert-light w-75" role="alert">
+                        <p><span class="text-decoration-underline  text-warning">Graphic Designers</span> who want to
+                            transition into the UX
+                            design
+                        </p>
+                    </div>
+                    <div class="alert alert-light w-75" role="alert">
+                        <span class="text-decoration-underline  text-warning"> UX Designers</span> with 1-2 years
+                        of experience looking for
+                        the growth
                     </div>
                 </div>
-
-            </ul>
-        </div>
-        <div class="info">
-            <div>
-                <h1 class="me">
-                    Hi,<br><b> I'm <img class="A" src="/HTML Examples/font.png"><b class="name">QUIB,</b></b> <br>Web
-                    Developer.
-
-                </h1><br>
-                <div class="d-flex">
-                    <button class="btn btn-outline-warning w-25 me-3"><a href="#contact">Contact me </a><span
-                            class="bi bi-telephone"></span></button>
-                    <button class="btn btn-outline-warning w-25">Hire me <span class="bi bi-download"></span></button>
+                <div class="col-md-6 mt-1">
+                    <div class="alert alert-light w-75" role="alert">
+                        <span class=" text-decoration-underline text-warning">Students</span> who want to pursue a
+                        career in UX
+                        <br> Design
+                    </div>
+                    <div class="alert alert-light w-75" role="alert">
+                        <span class=" text-decoration-underline text-warning">Product Manages and Developers</span> who
+                        want to learn
+                        <br> design
+                    </div>
                 </div>
-
             </div>
         </div>
-    </header>
 
-    <div class="all">
-        <!-- EDUCATION -->
-
-        <div class="Education" id="Education">
-            <h2><b>EDUCATION</b></h2>
-            <ul>
-                <li>
-                    <h4 class="text-info"><b>Secondary School Certificate(SSC)</b></h4>
-                    <p class="text-secondary">-Carmel Covent School, Ahmednagar Maharashtra.</p>
-                </li>
-                <li>
-                    <h4 class="text-info"><b>Higher Secondary Certificate(HSC)</h4>
-                    <p class="text-secondary">-Residential Jr.College, Ahmednagar Maharashtra.</p>
-                </li>
-                <li>
-                    <h4 class="text-info"><b>Bachelor of Engineering(BE)</b></h4>
-                    <p class="text-secondary">-Dr.Vithalrao Vikhe patil College of Engineering,Ahmednagar Maharashtra.
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Skills -->
-        <div class="skills" id="skills">
-            <h2><b>SKILLS</b></h2>
-            <ul style="font-size: 22px;">
-
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Bootstrap</li>
-                <li>Sass/Less</li>
-                <li>Javascript</li>
-                <li>jQuery</li>
-                <li>React</li>
-            </ul>
-        </div>
-
-
-        <!-- Projects -->
-
-        <div class="projects" id="project">
-            <div class="d-flex">
-                <h2><b>PROJECTS</b></h2>:<h2 id="display"></h2>
-            </div>
-            <table width="100%" border="1" frame="void">
-                <tbody>
-                    <tr>
-                        <td><img src="/public/Images/KFCorder.png" class="imges" name="Cards"
-                                ondblclick="OpenImage(this.name)" onmouseover="GetDetails('KFC Orders')" width="380px">
-                            <p><a href="http://127.0.0.1:5500/Projects/Kfc.html" class="proj">KFC Order Now</a></p>
-                        </td>
-                        <td><img src="/public/Images/N.png" class="imges" name="Netflix Login"
-                                ondblclick="OpenImage(this.name)" width="380px">
-                            <p><a href="http://127.0.0.1:5500/HTML%20Examples/Sign-In%20pages/Netflix.html"
-                                    class="proj">Netflix login page</a></p>
-                        </td>
-
-                        <td><img src="/public/Images/Screenshot (201).png" class="imges" name="Responsive"
-                                ondblclick="OpenImage(this.name)" width="380px">
-                            <p><a href="http://127.0.0.1:5500/Projects/ResponsiveDesign.html" class="proj">Responsive
-                                    Design</a></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="/public/Images/hotel2.png" class="imges" name="Hotel Registration"
-                                ondblclick="OpenImage(this.name)" width="380px">
-                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Hotel.html" class="proj">Hotel
-                                    Regitration Form</a></p>
-                        </td>
-
-                        <td><img src="/public/Images/Amazons.png.png" class="imges" name="Amazon"
-                                ondblclick="OpenImage(this.name)" width="380px">
-                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Amazon.html"
-                                    class="proj">Interactive Carousel and Cart Items</a></p>
-                        </td>
-
-                        <td><img src="/public/Images/bmicalci.png" class="imges" name="BMI Calculator"
-                                ondblclick="OpenImage(this.name)" width="380px" height="220px">
-                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/Calculators/BMI.html"
-                                    class="proj">BMI
-                                    Calculator</a></p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><img src="/public/Images/india.png.png" class="imges" name="Portal"
-                                ondblclick="OpenImage(this.name)" width="380">
-                            <p><a href="http://127.0.0.1:5500/Projects/portal.html" class="proj">Portal of India</a></p>
-                        </td>
-                        <td><img src="/public/Images/gds.png.png" class="imges" name="GDS"
-                                ondblclick="OpenImage(this.name)" width="380px">
-                            <p><a href="" class="proj">GDS Online Engagement</a></p>
-                        </td>
-
-                        <td><img src="/public/Images/CasscadingDropdown.png" class="imges" name="Casscading Dropdown"
-                                ondblclick="OpenImage(this.name)" width="380">
-                            <p><a href="http://127.0.0.1:5500/Javascript%20Examples/CascadingINOX.html"
-                                    class="proj">Casscading Dropdown</a></p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div><br>
-        <div class="contactme" id="contact">
-            <h2 style="color:aqua;">CONTACT ME</h2>
-            <p>If you have any query you can directly contact me, for that you just have to fill the following details
-                below.</p>
-            <div class="d-flex mb-3">
-                <input type="text" class="form-control me-3 w-25" size="8" placeholder="Your Name"><input type="email"
-                    size="8" class="form-control w-25" placeholder="Enter email address">
-            </div>
-            <textarea name="" id="" cols="70" rows="10" placeholder="Enter text here"></textarea><br>
-            <button class="btn btn-outline-warning mb-5"><a
-                    href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Send Message!</a></button>
-        </div>
-    </div>
-
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 
 </body>
